@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability, Permutation, Combination Calculator</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4fdf4; /* Light greenish white */
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background-color: #4CAF50; /* Green */
+            padding: 0.5em 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            color: #f4fdf4; /* Light greenish white */
+            text-decoration: underline;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Calculator Section */
+        .calculator {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .calculator h2 {
+            color: #006400; /* Dark Green */
+        }
+
+        .calculator label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1em;
+        }
+
+        /* Adjusted width of input fields */
+        .calculator input {
+            width: 90%;  /* Adjusted width to make inputs more compact */
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+
+        }
+
+        .calculator button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            
+        }
+
+        .calculator button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .calculator .erase-btn {
+            background-color: #ff6347; /* Tomato red */
+            margin-top: 10px;
+        }
+
+        .calculator p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #006400; /* Dark Green */
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Probability, Permutation, and Combination Calculator</h1>
+        <p>Calculate Probability, Permutation, and Combination with ease.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="group.html">Members</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Probability Calculator Section -->
+        <section class="calculator">
+            <h2>Probability Calculator</h2>
+            <p>Enter the favorable outcomes and total outcomes:</p>
+            <label for="favorable">Favorable Outcomes:</label>
+            <input type="number" id="favorable" required>
+            <label for="total">Total Outcomes:</label>
+            <input type="number" id="total" required>
+            <button id="calculate-probability" onclick="calculateProbability()">Calculate Probability</button>
+            <button class="erase-btn" onclick="eraseFields('favorable', 'total', 'probability-result')">Erase</button>
+            <p id="probability-result"></p>
+        </section>
+
+        <!-- Permutation Calculator Section -->
+        <section class="calculator">
+            <h2>Permutation Calculator</h2>
+            <p>Enter total items (n) and items to arrange (r):</p>
+            <label for="n-permutation">Total Items (n):</label>
+            <input type="number" id="n-permutation" required>
+            <label for="r-permutation">Items to Arrange (r):</label>
+            <input type="number" id="r-permutation" required>
+            <button id="calculate-permutation" onclick="calculatePermutation()">Calculate Permutation</button>
+            <button class="erase-btn" onclick="eraseFields('n-permutation', 'r-permutation', 'permutation-result')">Erase</button>
+            <p id="permutation-result"></p>
+        </section>
+
+        <!-- Combination Calculator Section -->
+        <section class="calculator">
+            <h2>Combination Calculator</h2>
+            <p>Enter total items (n) and items to choose (r):</p>
+            <label for="n-combination">Total Items (n):</label>
+            <input type="number" id="n-combination" required>
+            <label for="r-combination">Items to Choose (r):</label>
+            <input type="number" id="r-combination" required>
+            <button id="calculate-combination" onclick="calculateCombination()">Calculate Combination</button>
+            <button class="erase-btn" onclick="eraseFields('n-combination', 'r-combination', 'combination-result')">Erase</button>
+            <p id="combination-result"></p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Our Team. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Calculate Probability
+        function calculateProbability() {
+            const favorable = document.getElementById('favorable').value;
+            const total = document.getElementById('total').value;
+
+            if (favorable && total) {
+                const probability = favorable / total;
+                document.getElementById('probability-result').textContent = `Probability = ${probability.toFixed(4)}`;
+            } else {
+                document.getElementById('probability-result').textContent = 'Please enter both values.';
+            }
+        }
+
+        // Calculate Permutation (nPr)
+        function calculatePermutation() {
+            const n = document.getElementById('n-permutation').value;
+            const r = document.getElementById('r-permutation').value;
+
+            if (n && r) {
+                const permutation = factorial(n) / factorial(n - r);
+                document.getElementById('permutation-result').textContent = `Permutation (nPr) = ${permutation}`;
+            } else {
+                document.getElementById('permutation-result').textContent = 'Please enter both values.';
+            }
+        }
+
+        // Calculate Combination (nCr)
+        function calculateCombination() {
+            const n = document.getElementById('n-combination').value;
+            const r = document.getElementById('r-combination').value;
+
+            if (n && r) {
+                const combination = factorial(n) / (factorial(r) * factorial(n - r));
+                document.getElementById('combination-result').textContent = `Combination (nCr) = ${combination}`;
+            } else {
+                document.getElementById('combination-result').textContent = 'Please enter both values.';
+            }
+        }
+
+        // Helper function to calculate factorial
+        function factorial(num) {
+            if (num === 0 || num === 1) return 1;
+            let result = 1;
+            for (let i = 2; i <= num; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        // Erase Fields function
+        function eraseFields(...fields) {
+            fields.forEach(field => {
+                document.getElementById(field).value = '';
+            });
+            document.getElementById(fields[fields.length - 1]).textContent = '';
+        }
+    </script>
+</body>
+</html>

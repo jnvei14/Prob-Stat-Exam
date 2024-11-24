@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4fdf4; /* Light greenish white */
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background-color: #4CAF50; /* Green */
+            padding: 0.8em 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            color: #f4fdf4; /* Light greenish white */
+            text-decoration: underline;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Group Section */
+        .group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        /* Member Card Styling */
+        .member-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-card h2 {
+            font-size: 1.8em;
+            color: #006400; /* Dark Green */
+            margin-bottom: 15px;
+        }
+
+        .member-card p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>The Members</h1>
+        <p>Meet the amazing individuals who make up the project.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="group.html">Members</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="group">
+            <!-- Member 1 -->
+            <div class="member-card">
+                <h2>Andres Gomera</h2>
+                <p>Oversees the entire project, ensuring deadlines and milestones are met.</p>
+            </div>
+            <!-- Member 2 -->
+            <div class="member-card">
+                <h2>Julian Rob Comanda</h2>
+                <p>Designs and develops the visual layout and user interface (UI) of the website.</p>
+            </div>
+            <!-- Member 3 -->
+            <div class="member-card">
+                <h2>Franz Ezra Baylosis and John Lloyd Alberio</h2>
+                <p>Responsible for coding and implementing the main functionality of the calculators (probability, permutation, combination, simple calculator).</p>
+            </div>
+           
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Our Team. All rights reserved.</p>
+    </footer>
+</body>
+</html>

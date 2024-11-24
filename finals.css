@@ -1,0 +1,340 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4fdf4; /* Light greenish white */
+}
+
+header {
+    background: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0 1em; /* Adjust padding to make room for the nav */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 20px;
+    font-size: 1.2em;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    color: #d9f2d9; /* Light green hover effect */
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 5px solid #4CAF50; /* Green stripe */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #4CAF50; /* Green */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333; /* Dark gray */
+    color: white;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d9f2d9; /* Light green hover */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Button styles */
+.button-container button {
+    background-color: #077f0b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects */
+.button-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Active/Click effects */
+.button-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #3d8b40;
+}
+
+/* Focus states */
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .button-container button {
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Additional styles to ensure proper spacing with your existing navbar */
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar + .button-container {
+    margin-top: 0.5rem;
+}
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fdf4; /* Light greenish white */
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #006400; /* Dark Green */
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #4CAF50; /* Green */
+    padding: 0.5em 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #f4fdf4; /* Light greenish white */
+    text-decoration: underline;
+}
+
+/* Main Content Section */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4fdf4; /* Light greenish white */
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background-color: #4CAF50; /* Green */
+            padding: 0.8em 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            color: #f4fdf4; /* Light greenish white */
+            text-decoration: underline;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Group Section */
+        .group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        /* Member Card Styling */
+        .member-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-card h2 {
+            font-size: 1.8em;
+            color: #006400; /* Dark Green */
+            margin-bottom: 15px;
+        }
+
+        .member-card p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+   
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #006400; /* Dark Green */
+    color: white;
+    margin-top: 20px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability and Statistics Concepts</title>
+    <link rel="stylesheet" href="finals.css">
+</head>
+<body>
+    <header>
+        <h1>Probability and Statistics Concepts</h1>
+        <p>Explore Probability, Permutation, and Combination</p>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="group.html">Members</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+        <div class="button-container">
+            <button onclick="location.href='#permutation'">Permutation</button>
+            <button onclick="location.href='#combination'">Combination</button>
+            <button onclick="location.href='#probability'">Probability</button>
+        </div>
+
+    </header>
+    <main>
+        <section id="probability">
+            <h2>Probability</h2>
+            <p><strong>Definition:</strong> Probability is the measure of how likely an event is to occur, ranging from 0 (impossible) to 1 (certain). It helps quantify uncertainty and is widely used in decision-making, games, and predictions. Probability is calculated as the ratio of favorable outcomes to the total possible outcomes. </p>
+            <li>0 means the event is impossible.</li>
+            <li>1 means the event is certain.</li>
+            <strong>Formula:</strong>
+            Probability (P) = Favorable Outcomes / Total Possible Outcomes
+            <p><strong>Example:</strong> If you roll a standard 6-sided die, the probability of rolling a 4 is: P (rolling a 4) = 1/6 (There is 1 favorable outcome (rolling a 4), and 6 possible outcomes (1, 2, 3, 4, 5, 6)).
+             <p><strong>Applications:</strong></p>
+             <li>Weather forecasting (e.g., "There is a 70% chance of rain today.")</li>
+             <li>Risk analysis in finance or insurance.</li>
+             <li>Decision-making in games and sports.</li>
+        </section>
+        <section id="permutation">
+            <h2>Permutation</h2>
+            <strong>Definition: </strong>A permutation is an arrangement of objects in a specific order, where the sequence matters. It considers all possible ways items can be organized, such as arranging letters, forming unique passwords, or assigning positions. The number of permutations increases as more items are included in the calculation. Mathematically, it uses factorials to determine arrangements. Permutations are used in scheduling, seating arrangements, and ranking tasks where order is critical.</p>
+            <strong>Formula: </strong>
+                <p>The number of permutations of 𝑛 objects taken 𝑟 at a time is:</p>
+                P(n,r) = n! / (n-r)!
+                <p>Where: </p>
+            <li>n! (n factorial) is the product of all integers from 1 to 
+                𝑛
+                 (e.g., 
+                5
+                !
+                =
+                5
+                ×
+                4
+                ×
+                3
+                ×
+                2
+                ×
+                1
+                =
+                120
+                5!=5×4×3×2×1=120)</li>
+
+            <strong>Example: </strong>
+            You have 3 letters: A, B, C. How many ways can you arrange all 3? <p>
+                𝑃
+                (
+                3
+                ,
+                3
+                )
+                =
+                3
+                !
+                (
+                3
+                −
+                3
+                )
+                !
+                =
+                6
+                1
+                =
+                6
+                <p>  </p>
+            <p>The arrangements are: ABC, ACB, BAC, BCA, CAB, CBA.
+
+            </p>
+            <p><strong> Applications:</strong></p>
+            <li>Scheduling tasks or arranging items in order.</li>
+            <li>Creating passwords where order matters.</li>
+            <li>Assigning ranks or positions.</li>
+        </section>
+        <section id="combination">
+            <h2>Combination</h2>
+            <p><strong>Definition: </strong>A combination refers to selecting items from a group where order does not matter. It focuses only on the selection, ignoring how the items are arranged. For example, picking 3 people from a group of 5 for a team is a combination since their order doesn’t affect the outcome. The formula uses factorials to account for repeated arrangements and eliminates duplicates. Combinations are widely used in probability, research sampling, and forming groups or teams.
+            <p><strong>Formula:</strong></p>
+            <p>The number of combinations of 𝑛 objects taken 𝑟 at a time is: C(n,r) n! / r! (n-r)!</p>
+            <p><strong> Example: </strong></p>
+            <p>You have 3 fruits: Apple, Banana, and Cherry. How many ways can you choose 2 fruits? <p>C(3,2) = 3! / 2! (3 - 2)! = 6 / 2 = 3 </p>
+            <p>The combinations are: {Apple, Banana}, {Apple, Cherry}, {Banana, Cherry}.</p>
+            <p><strong> Applications:</strong></p>
+            <li>   Selecting teams or groups.</li>
+            <li>Choosing lottery numbers (order doesn’t matter).</li>
+            <li>Selecting objects in research or surveys.</li>
+
+
+            </p>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Probability and Statistics Concepts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<link rel="stylesheet" href="finals.css">
